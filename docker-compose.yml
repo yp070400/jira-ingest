@@ -61,6 +61,7 @@ services:
       - "8000:8000"
     volumes:
       - faiss_data:/app/data/faiss
+      - models_data:/app/models
       - ./logs:/app/logs
     depends_on:
       postgres:
@@ -104,6 +105,7 @@ volumes:
   postgres_data:
   redis_data:
   faiss_data:
+  models_data:
   prometheus_data:
 
 networks:
